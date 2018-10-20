@@ -15,9 +15,9 @@ public class Drive : MonoBehaviour {
 
     void Update()
     {
-        float translation = CrossPlatformInputManager.GetAxisRaw("Vertical") * speed;
-        float rotation = CrossPlatformInputManager.GetAxisRaw("Horizontal") * rotationSpeed;
-        float jumping = Input.GetAxisRaw("Jump") * jumpSpeed;
+        float translation = CrossPlatformInputManager.GetAxis("Vertical") * speed;
+        float rotation = CrossPlatformInputManager.GetAxis("Horizontal") * rotationSpeed;
+        float jumping = Input.GetAxis("Jump") * jumpSpeed;
         translation *= Time.deltaTime;
         rotation *= Time.deltaTime;
         jumping *= Time.deltaTime;
